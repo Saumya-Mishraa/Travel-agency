@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travelly</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="logo">
+        <img src="plane.png" alt="Plane Icon" class="plane-icon">
+        <span>Travelly</span>
+    </div>
+    <nav id="navbar">
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Reviews</a></li>
+            <li><a href="#inquiry">Inquiry</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <img src="hamburger.svg" alt="Menu Icon" width="30">
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="animate zoom-in">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Explore The World With Travelly</h1>
+        <p>Your adventure starts here</p>
+        <a href="#destinations" class="btn">Discover Destinations</a>
+    </div>
+</section>
+
+<!-- Destinations -->
+<section id="destinations" class="animate fade-up">
+    <h2>Top Destinations</h2>
+    <div class="dest-grid">
+        <div class="dest-card animate fade-up">
+            <img src="dubai.jpg" alt="Burj Khalifa">
+            <div class="dest-info">
+                <h3>Burj Khalifa</h3>
+                <p>The tallest skyscraper in the world, offering breathtaking views of Dubai.</p>
+            </div>
+        </div>
+        <div class="dest-card animate fade-up">
+            <img src="egypt.jpg" alt="Egypt Pyramid">
+            <div class="dest-info">
+                <h3>Egypt Pyramid</h3>
+                <p>Ancient wonders in the desert, a true marvel of history and architecture.</p>
+            </div>
+        </div>
+        <div class="dest-card animate fade-up">
+            <img src="new york.jpg" alt="New York">
+            <div class="dest-info">
+                <h3>New York</h3>
+                <p>The city that never sleeps, filled with iconic landmarks and culture.</p>
+            </div>
+        </div>
+        <div class="dest-card animate fade-up">
+            <img src="eiffel tower.jpg" alt="Eiffel Tower">
+            <div class="dest-info">
+                <h3>Eiffel Tower</h3>
+                <p>Romantic Paris icon, offering stunning city views and exquisite dining.</p>
+            </div>
+        </div>
+        <div class="dest-card animate fade-up">
+            <img src="tajmahal.jpg" alt="Taj Mahal">
+            <div class="dest-info">
+                <h3>Taj Mahal</h3>
+                <p>The symbol of love, combining exquisite Mughal architecture with history.</p>
+            </div>
+        </div>
+        <div class="dest-card animate fade-up">
+            <img src="greatwall.jpg" alt="Great Wall">
+            <div class="dest-info">
+                <h3>Great Wall of China</h3>
+                <p>A monumental feat of engineering stretching across mountains and valleys.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section id="packages" class="animate fade-right">
+    <h2>Traveler Reviews</h2>
+    <div class="reviews-slider">
+        <div class="review-card animate zoom-in">
+            <img src="goa.jpg" alt="Goa">
+            <h3>Goa</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>Beautiful beaches, vibrant nightlife, and unforgettable sunsets.</p>
+        </div>
+        <div class="review-card animate zoom-in">
+            <img src="manali.jpg" alt="Manali">
+            <h3>Manali</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>Snowy mountains, peaceful valleys, and thrilling adventure activities.</p>
+        </div>
+        <div class="review-card animate zoom-in">
+            <img src="maldives.jpg" alt="Maldives">
+            <h3>Maldives</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>Crystal-clear waters, luxury resorts, and serene tropical vibes.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Inquiry Form -->
+<section id="inquiry" class="animate zoom-in">
+    <form id="inquiry-form">
+        <input type="text" placeholder="Search Destination*" required>
+        <input type="number" placeholder="Pax Number*" required>
+        <input type="date" required>
+        <input type="date" required>
+        <button type="submit">Inquire Now</button>
+    </form>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why" class="animate fade-left">
+    <h2>Why Choose Us</h2>
+    <div class="why-grid">
+        <div class="why-card animate fade-up">
+            <img src="why1.jpg" alt="Expert Guides">
+            <h3>Expert Guides</h3>
+            <p>Our professional guides ensure a seamless and enriching travel experience every time.</p>
+        </div>
+        <div class="why-card animate fade-up">
+            <img src="why2.jpg" alt="Customized Packages">
+            <h3>Customized Packages</h3>
+            <p>We tailor travel packages according to your preferences for a unique journey.</p>
+        </div>
+        <div class="why-card animate fade-up">
+            <img src="why3.jpg" alt="24/7 Support">
+            <h3>24/7 Support</h3>
+            <p>Our dedicated team is always available to assist you, making your trips worry-free.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us -->
+<section id="contact" class="animate fade-up">
+    <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="social-icons">
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="animate fade-up">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="plane.png" alt="Plane Icon">
+            <span>Travelly</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Reviews</a></li>
+            <li><a href="#inquiry">Inquiry</a></li>
+            <li><a href="#why">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-social">
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 Travelly. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

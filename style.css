@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* 🌟 Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1E90FF;
+}
+
+.logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #1E90FF;
+}
+
+/* 🍔 Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger img {
+  width: 30px;
+  filter: brightness(0);
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* 🌸 Mobile navbar slide-in */
+@media(max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background: #fff;
+    flex-direction: column;
+    padding: 60px 20px;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
+}
+
+/* 🌄 Hero Section */
+#hero {
+  position: relative;
+  height: 90vh;
+  background: url('hero background.jpg') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  padding: 12px 25px;
+  background-color: #1E90FF;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+  background-color: #1C86EE;
+}
+
+/* 🗺 Destinations */
+#destinations {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+#destinations h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.dest-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.dest-card:hover {
+  transform: translateY(-10px);
+}
+
+.dest-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dest-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.dest-info h3 {
+  color: #1E90FF;
+  margin-bottom: 10px;
+}
+
+.dest-info p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* 🌸 Reviews / Packages */
+#packages {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #FAF0E6;
+}
+
+#packages h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.reviews-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.review-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+}
+
+.review-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.review-card h3 {
+  color: #1E90FF;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* 💌 Inquiry Form */
+#inquiry {
+  padding: 80px 50px;
+  background-color: #1E90FF;
+  text-align: center;
+}
+
+#inquiry form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#inquiry input,
+#inquiry button {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+#inquiry input {
+  border: none;
+}
+
+#inquiry button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#inquiry button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 🌍 Why Choose Us */
+#why {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #FAF0E6;
+}
+
+#why h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+}
+
+.why-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  margin-bottom: 10px;
+  color: #1E90FF;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 📩 Contact */
+#contact {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#contact button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1E90FF;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#contact button:hover {
+  background-color: #1C86EE;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ⚫ Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 50px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1E90FF;
+}
+
+.footer-logo img {
+  width: 30px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #1E90FF;
+}
+
+.footer-social a img {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* 🌟 Scroll Animations */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌍 Responsive adjustments */
+@media(max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dest-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .dest-grid,
+  .why-grid,
+  .reviews-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .package-cards {
+    flex-direction: column;
+  }
+
+  form {
+    width: 90%;
+  }
+}
